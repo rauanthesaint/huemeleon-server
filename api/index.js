@@ -2,15 +2,13 @@ import express from "express";
 import { CHANNEL_ID, PORT, TOKEN } from "./config/index.js";
 import TelegramBot from "node-telegram-bot-api";
 
-const BOT_CONSTRUCTOR_OPTIONS = {
+const app = express();
+const bot = new TelegramBot(TOKEN, {
   polling: {
     autoStart: true,
     interval: 300,
   },
-};
-
-const app = express();
-const bot = new TelegramBot(TOKEN, BOT_CONSTRUCTOR_OPTIONS);
+});
 
 app.use(express.json());
 
