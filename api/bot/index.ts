@@ -8,10 +8,8 @@ const Bot = new TelegramBot(TOKEN, {
   },
 });
 
-process.on("SIGINT", () => {
-  console.log("\x1b[36m%s\x1b[0m", "[server]: Server is stopped");
-  Bot.stopPolling();
-  process.exit();
-});
+// Bot.onText(/\/clear/, (message) => {
+//   Bot.;
+// });
 
 export default Bot;

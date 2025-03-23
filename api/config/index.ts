@@ -1,4 +1,4 @@
-import ConfigService from "./config.js";
+import ConfigService from "./config";
 
 const config = new ConfigService();
 
