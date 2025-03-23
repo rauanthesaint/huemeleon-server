@@ -1,5 +1,4 @@
 import express from "express";
-import { PORT } from "./config/index.js";
 import router from "./router/index.js";
 
 const app = express();
@@ -19,6 +18,4 @@ app.get("/", (request, response) => {
   });
 });
 
-app.listen(PORT, () =>
-  console.log("\x1b[32m%s\x1b[0m", `Server is ready on port ${PORT}`)
-);
+export default app;
