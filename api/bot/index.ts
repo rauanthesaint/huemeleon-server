@@ -8,8 +8,12 @@ const Bot = new TelegramBot(TOKEN, {
   },
 });
 
-// Bot.onText(/\/clear/, (message) => {
-//   Bot.;
-// });
+Bot.onText(/\/start/, (message) => {
+  const { chat } = message;
+  Bot.sendMessage(
+    chat.id,
+    "Hello, I'm Minerva - Telegram bot created to manage customer support service"
+  );
+});
 
 export default Bot;
